@@ -148,7 +148,7 @@ public class ProjectArcherySec {
     }
     
     
-     public String InfrastructureScan(String scanip,String scanner,String token) throws MalformedURLException, IOException{
+     public String InfrastructureScan(String scanip,String token) throws MalformedURLException, IOException{
         URL obj = new URL(ArcherySec.URLBASE+"api/networkscan/");
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
@@ -156,7 +156,7 @@ public class ProjectArcherySec {
         con.setRequestProperty("Content-Type", "application/json");
         con.setRequestProperty("Authorization","JWT "+token);
         String urlParameters = "{\n"
-                + "    \"scan_url\": \""+scanip+"\",\n"
+                + "    \"scan_ip\": \""+scanip+"\",\n"
                 + "    \"project_id\": \""+Project_ID+"\"\n"
                 
                 + "}";
