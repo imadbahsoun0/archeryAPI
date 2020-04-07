@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class ArcherySec {
     private final String Username = "admin"; //username of archery sec
     private final String Password = "admin"; //password of archery sec
-    public static String URLBASE = "http://192.168.203.137:8000/";
+    public static String URLBASE = "http://10.4.21.22:8000/";
    
     
     
