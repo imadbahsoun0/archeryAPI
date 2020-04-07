@@ -45,8 +45,13 @@ public class JavaApplication38 {
         } else if (args[0].equals("infra-scan")) {
             File file = new File("inputInfra-IP.txt");
             Scanner scan = new Scanner(file);
+            ArcherySec ar = new ArcherySec();
+            ProjectArcherySec pro = new ProjectArcherySec(projectID, "", "", "", "", "");
+            String token = ar.loginToken();
+            Scanner scan = new Scanner(file);
             while (scan.hasNext()) {
                 String input = scan.nextLine();
+                InfrastructureScan(input,token);
                 System.out.println(input);
             }
         }
