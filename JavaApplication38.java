@@ -48,10 +48,10 @@ public class JavaApplication38 {
             ArcherySec ar = new ArcherySec();
             ProjectArcherySec pro = new ProjectArcherySec(projectID, "", "", "", "", "");
             String token = ar.loginToken();
-            Scanner scan = new Scanner(file);
+            
             while (scan.hasNext()) {
                 String input = scan.nextLine();
-                InfrastructureScan(input,token);
+                pro.InfrastructureScan(input,token);
                 System.out.println(input);
             }
         }
